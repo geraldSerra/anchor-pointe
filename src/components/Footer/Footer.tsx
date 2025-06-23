@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        © 2025 The Lab. All rights reserved.
+        © 2025 The Anchor Pointe. All rights reserved.
       </div>
     </div>
   );
