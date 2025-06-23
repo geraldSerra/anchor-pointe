@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  padding-top: 180px;
+  width: 100%;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right top,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #12070e,
+    #1a0f1a,
+    #151d37
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white-color);
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: var(--section-max-width);
+}
+
+.img {
+  height: 600px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  position: relative;
+  filter: blur(2px) brightness(0.4);
+}
+
+.info {
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  justify-self: flex-end;
+  gap: 25px;
+  position: relative;
+  left: -80px;
+}
+
+.title {
+  font-size: 100px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  all: unset;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(17, 166, 176);
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgba(32, 11, 105, 1);
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  all: unset;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    position: relative;
+    padding-top: 150px;
+    width: 100%;
+    min-height: 70vh;
+    padding: 30px;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    height: 350px;
+    filter: blur(1px) brightness(0.25);
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    left: 0;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button {
+    font-size: 14px;
+    width: 60%;
+  }
+}
