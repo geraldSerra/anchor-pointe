@@ -2,7 +2,6 @@
   display: flex;
   padding-top: 180px;
   width: 100%;
-  min-height: 80vh;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(
@@ -28,6 +27,7 @@
   width: 100%;
   height: 100%;
   max-width: var(--section-max-width);
+  margin-bottom: 60px;
 }
 
 .img {
