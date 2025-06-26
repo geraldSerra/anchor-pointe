@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import icon from "../../assets/anchor-pointer-logo-description.png";
+import icon from "../../assets/anchor-pointe-logo-name.png";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 const Footer = () => {
