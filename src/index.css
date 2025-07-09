@@ -8,9 +8,12 @@ body {
 }
 
 :root {
-  --primary-color: #000000;
+  --background-color: #ffffff;
+  --primary-color: #021c2b;
   --secondary-color: #777777;
   --white-color: #eeeeee;
+  --accent-color: #0118D8;
+
   --section-max-width: 1400px;
   --section-margin-x: 0px 20px;
   --section-margin-top: 90px;

@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
   max-width: var(--section-max-width);
   gap: 40px;
   /* border: 1px solid; */
   padding: 20px;
   padding-bottom: 60px;
   box-sizing: border-box;
+
 }
 .title {
   font-size: 42px;
@@ -62,6 +62,42 @@
   border-top: 2px solid rgb(193, 193, 193);
   font-size: 18px;
   font-weight: 500;
+}
+
+.extra {
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.notaryContainer {
+  display: flex;
+ flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.notary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  min-width: 380px;
+  max-width: 400px;
+  font-weight: 500;
+  padding-left: 30px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 600px) {

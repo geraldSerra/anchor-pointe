@@ -6,9 +6,12 @@ const NavBar = () => {
   return (
     <nav className={styles.navBar}>
       <div className={styles.content}>
-        <img className={styles.logo} src={logo} alt="logo" />
+        <div className={styles.logoContainer}>
+          <img className={styles.logo} src={logo} alt="logo" /> ANCHOR POINTE
+        </div>
+
         <ul className={styles.tabsContainer}>
-          <li>
+          <li className={styles.li}>
             <button
               className={styles.tab}
               onClick={() => scrollToSection("services")}
@@ -16,7 +19,7 @@ const NavBar = () => {
               Services
             </button>
           </li>
-          <li>
+          <li className={styles.li}>
             <button
               className={styles.tab}
               onClick={() => scrollToSection("about")}
@@ -24,15 +27,13 @@ const NavBar = () => {
               Who are we?
             </button>
           </li>
-          <li>
-            <button
-              className={`${styles.tab} ${styles.highlight}`}
-              onClick={() => scrollToSection("contact")}
-            >
-              Schedule with us
-            </button>
-          </li>
         </ul>
+        <button
+          className={`${styles.tab} ${styles.highlight}`}
+          onClick={() => scrollToSection("contact")}
+        >
+          Schedule with us
+        </button>
       </div>
     </nav>
   );
