@@ -1,4 +1,3 @@
-import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import scrollToSection from "../../utils/scrollToSection";
 import styles from "./NavbarDrawer.module.css";
@@ -24,6 +23,11 @@ export default function NavbarDrawer({
       setOpen(open);
     };
 
+  const handleClick = (where: string) => {
+    scrollToSection(where);
+    setTimeout(() => setOpen(false), 200);
+  };
+
   const List = () => (
     <ul className={styles.tabsContainer}>
       <div className={styles.head}>
@@ -31,34 +35,19 @@ export default function NavbarDrawer({
         <CloseIcon sx={{ fontSize: "2.5rem" }} onClick={() => setOpen(false)} />
       </div>
       <li className={styles.li}>
-        <button
-          className={styles.tab}
-          onClick={() => {
-            scrollToSection("about");
-            setOpen(false);
-          }}
-        >
+        <button className={styles.tab} onClick={() => handleClick("about")}>
           Who are we?
         </button>
       </li>
       <li className={styles.li}>
-        <button
-          className={styles.tab}
-          onClick={() => {
-            scrollToSection("services");
-            setOpen(false);
-          }}
-        >
+        <button className={styles.tab} onClick={() => handleClick("services")}>
           Services
         </button>
       </li>
       <li className={styles.li}>
         <button
-          className={`${styles.tab}`}
-          onClick={() => {
-            scrollToSection("contact");
-            setOpen(false);
-          }}
+          className={`${styles.tab} ${styles.highlight}`}
+          onClick={() => handleClick("contact")}
         >
           Schedule with us
         </button>
