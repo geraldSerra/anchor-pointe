@@ -35,7 +35,7 @@ export default function NavbarDrawer({
           className={styles.tab}
           onClick={() => {
             scrollToSection("about");
-            // setOpen(false);
+            setOpen(false);
           }}
         >
           Who are we?
@@ -46,7 +46,7 @@ export default function NavbarDrawer({
           className={styles.tab}
           onClick={() => {
             scrollToSection("services");
-            // setOpen(false);
+            setOpen(false);
           }}
         >
           Services
@@ -54,7 +54,7 @@ export default function NavbarDrawer({
       </li>
       <li className={styles.li}>
         <button
-          className={`${styles.tab} ${styles.highlight}`}
+          className={`${styles.tab}`}
           onClick={() => {
             scrollToSection("contact");
             setOpen(false);
