@@ -1,9 +1,7 @@
 .container {
   display: flex;
-  border: 2px solid white;
   max-width: var(--section-max-width);
-  font-size: 20px;
-  margin-top: 40px;
+  margin: var(--x-margin);
 }
 
 .leftSide {
@@ -77,9 +75,6 @@
 @media only screen and (max-width: 600px) {
   .container {
     display: block;
-    border: 2px solid white;
-    font-size: 14px;
-    margin: 0 var(--small-inner-padding-x);
   }
 
   .leftSide {

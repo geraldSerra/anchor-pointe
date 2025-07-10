@@ -29,23 +29,24 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className={styles.container}>
-      <div className={styles.title}>Services</div>
-      <div className={styles.cardContainer}>
-        {formularios.map((item: any) => (
-          <ServiceCard name={item.name} info={item.info} price={item.price} />
-        ))}
-      </div>
-      <div className={styles.extra}>
-        At AnchorPoint Immigration & Document Services, we offer professional
-        notarization services for a wide range of personal, legal, and official
-        documents — beyond immigration-related paperwork.
-      </div>
-      <div className={styles.title}>Our Notary Public services include:</div>
-      <div className={styles.notaryContainer}>
-    
-        {notaryDocuments.map((notary: string) => (
-          <div className={styles.notary}>{notary}</div>
-        ))}
+      <div className={styles.content}>
+        <div className={styles.title}>Services</div>
+        <div className={styles.cardContainer}>
+          {formularios.map((item: any) => (
+            <ServiceCard name={item.name} info={item.info} price={item.price} />
+          ))}
+        </div>
+        <div className={styles.extra}>
+          At AnchorPoint Immigration & Document Services, we offer professional
+          notarization services for a wide range of personal, legal, and
+          official documents — beyond immigration-related paperwork.
+        </div>
+        <div className={styles.title}>Our Notary Public services include:</div>
+        <div className={styles.notaryContainer}>
+          {notaryDocuments.map((notary: string) => (
+            <div className={styles.notary}>{notary}</div>
+          ))}
+        </div>
       </div>
     </section>
   );

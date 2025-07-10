@@ -1,36 +1,17 @@
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin-top: var(--navbar-height);
   box-sizing: border-box;
-}
-
-.warning {
-  display: flex;
-  flex-direction: flex;
-  gap: 20px;
-  width: 100%;
-padding: 20px;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--primary-color);
-  font-size: 18px;
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   max-width: var(--section-max-width);
-  margin-bottom: 60px;
 }
 
 .img {
@@ -51,10 +32,14 @@ padding: 20px;
 }
 
 .title {
-  font-size: 80px;
+  font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 500;
   color: var(--primary-color);
   line-height: 1;
+}
+
+.highlight {
+  color: var(--accent-color);
 }
 
 .description {
@@ -71,7 +56,7 @@ padding: 20px;
   all: unset;
   width: 100%;
   height: var(--button-heigh);
-  font-size: 18px;
+  font-size: 1.2rem;
   padding: 10px;
   font-weight: 600;
   border-radius: var(--button-heigh);
@@ -105,12 +90,8 @@ a {
 
 @media only screen and (max-width: 600px) {
   .container {
-    position: relative;
-    padding-top: 400px;
-    width: 100%;
-    min-height: 70vh;
+    min-height: 60vh;
     padding: 30px;
-    margin-top: 100px;
   }
 
   .content {
@@ -120,12 +101,6 @@ a {
   }
 
   .img {
-    /* position: absolute;
-    top: 30vh;
-    width: 100%;
-    height: 350px;
-    filter: blur(1px) brightness(0.25);
-    object-fit: cover; */
     display: none;
   }
 
@@ -140,11 +115,6 @@ a {
     font-size: 18px;
   }
 
-  .title {
-    font-size: 36px;
-    font-weight: 500;
-  }
-
   .actions {
     display: flex;
     flex-direction: column;
@@ -152,7 +122,6 @@ a {
   }
 
   .button {
-    font-size: 14px;
     width: 60%;
   }
 }

@@ -5,6 +5,8 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow-x: hidden;
   background-color: var(--background-color);
+  gap: 3rem;
 }

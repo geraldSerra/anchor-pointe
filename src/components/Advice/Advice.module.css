@@ -1,0 +1,11 @@
+.warning {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-sizing: border-box;
+}

@@ -1,5 +1,6 @@
 import styles from "./App.module.css";
 import AboutUsSection from "./components/AboutUsSection/AboutUsSection";
+import Advice from "./components/Advice/Advice";
 import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
@@ -12,6 +13,7 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Hero />
+      <Advice />
       <AboutUsSection />
       <MisionVisionSection />
       <ServicesSection />
