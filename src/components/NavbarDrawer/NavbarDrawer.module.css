@@ -26,6 +26,7 @@
   padding: 8px 14px;
   transition: all 0.4s;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .tab:hover {
