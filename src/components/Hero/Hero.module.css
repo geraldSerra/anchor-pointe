@@ -21,6 +21,15 @@
   position: relative;
 }
 
+.flag {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: var(--navbar-height);
+  opacity: 0;
+  /* z-index: -1; */
+}
+
 .info {
   display: flex;
   width: 550px;
@@ -88,7 +97,7 @@ a {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
   .container {
     min-height: 60vh;
     padding: 30px;
@@ -102,6 +111,10 @@ a {
 
   .img {
     display: none;
+  }
+
+  .flag {
+    opacity: 0.18;
   }
 
   .info {

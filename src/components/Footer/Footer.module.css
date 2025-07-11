@@ -10,6 +10,7 @@
   color: var(--white-color);
   box-sizing: border-box;
   font-size: 18px;
+  z-index: 1;
 }
 
 .content {

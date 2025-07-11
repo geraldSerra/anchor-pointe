@@ -25,7 +25,7 @@ export default function NavbarDrawer({
 
   const handleClick = (where: string) => {
     scrollToSection(where);
-    setTimeout(() => setOpen(false), 200);
+    setOpen(false);
   };
 
   const List = () => (

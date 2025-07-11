@@ -4,6 +4,7 @@
   max-height: 600px;
   max-width: var(--section-max-width);
   margin: var(--x-margin);
+  z-index: 1;
 }
 
 .form {

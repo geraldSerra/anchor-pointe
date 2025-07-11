@@ -14,26 +14,46 @@ const notaryDocuments = [
   "General documents requiring a notary seal",
 ];
 
-const ServicesSection = () => {
-  const ServiceCard = ({ name, info, price }: any) => {
-    return (
-      <div className={styles.card}>
-        <div>
-          <FeedOutlinedIcon sx={{ fontSize: { xs: "20px", sm: "50px" } }} />
-        </div>
-        <div className={styles.cardTitle}>{name}</div>
-        <div className={styles.cardPrice}>${price}</div>
+const ServiceCard = ({
+  name,
+  form,
+  info,
+  price,
+}: {
+  name: string;
+  form: string;
+  info: string;
+  price: number;
+}) => {
+  return (
+    <div className={styles.card}>
+      <div>
+        <FeedOutlinedIcon
+          className={styles.icon}
+          sx={{ fontSize: { xs: "10px", sm: "20px" } }}
+        />
       </div>
-    );
-  };
+      <div className={styles.cardTitle}>{name}</div>
+      <div className={styles.form}>{form}</div>
+      <div className={styles.info}>{info}</div>
+      <div className={styles.cardPrice}>${price}</div>
+    </div>
+  );
+};
 
+const ServicesSection = () => {
   return (
     <section id="services" className={styles.container}>
       <div className={styles.content}>
         <div className={styles.title}>Services</div>
         <div className={styles.cardContainer}>
           {formularios.map((item: any) => (
-            <ServiceCard name={item.name} info={item.info} price={item.price} />
+            <ServiceCard
+              name={item.name}
+              form={item.form}
+              info={item.info}
+              price={item.price}
+            />
           ))}
         </div>
         <div className={styles.extra}>

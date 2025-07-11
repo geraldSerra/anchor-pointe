@@ -8,4 +8,5 @@
   align-items: center;
   background-color: var(--primary-color);
   box-sizing: border-box;
+  z-index: 1;
 }
