@@ -113,9 +113,9 @@ a {
     display: none;
   }
 
-  .flag {
+  /* .flag {
     opacity: 0.12;
-  }
+  } */
 
   .info {
     display: flex;

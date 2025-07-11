@@ -7,7 +7,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 const Hero = () => {
   return (
     <div className={styles.container}>
-      <img className={styles.flag} src={flag} alt="USA flag" />
+      {/* <img className={styles.flag} src={flag} alt="USA flag" /> */}
       <div className={styles.content}>
         <img
           className={styles.img}
