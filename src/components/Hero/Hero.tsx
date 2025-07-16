@@ -1,8 +1,9 @@
 import styles from "./Hero.module.css";
 import logo from "../../assets/hero-anchor.png";
-import flag from "../../assets/usa-flag.png";
+// import flag from "../../assets/usa-flag.png";
 import scrollToSection from "../../utils/scrollToSection";
 import PhoneIcon from "@mui/icons-material/Phone";
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 
 const Hero = () => {
   return (
@@ -38,6 +39,10 @@ const Hero = () => {
             </a>
           </div>
         </div>
+      </div>
+      {/* <RecordVoiceOverIcon sx={{ fontSize: "2rem" }} /> */}
+      <div className={styles.hablamosEspañol}>
+        Hablamos <span className={styles.español}>Español</span>
       </div>
     </div>
   );

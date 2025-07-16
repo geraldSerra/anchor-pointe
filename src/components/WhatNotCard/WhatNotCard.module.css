@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.09);
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    rgba(149, 149, 149, 0.379),
+    rgba(128, 128, 128, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

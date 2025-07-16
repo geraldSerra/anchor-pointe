@@ -1,6 +1,64 @@
 import styles from "./AboutUsSection.module.css";
-import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
-import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import WhoCard from "../WhoCard/WhoCard";
+import Translation from "../../assets/Translation";
+import Formatting from "../../assets/Formatting";
+import Support from "../../assets/Support";
+import WhatNotCard from "../WhatNotCard/WhatNotCard";
+
+const disclaimers = [
+  {
+    icon: "1",
+    title: "We are not lawyers and do not offer legal advice",
+    description:
+      "We are not authorized to represent you before USCIS or provide legal guidance regarding your case.",
+  },
+  {
+    icon: "2",
+    title: "We do not guarantee immigration outcomes",
+    description:
+      "We assist you in correctly preparing your forms, but final approval is solely the responsibility of the U.S. government.",
+  },
+  {
+    icon: "3",
+    title: "We do not alter or falsify documents",
+    description:
+      "We only work with truthful information and documentation, in full compliance with all legal regulations.",
+  },
+  {
+    icon: "4",
+    title: "We do not replace specialized legal consultations",
+    description:
+      "If your case is complex or involves potential legal consequences, we recommend consulting with a licensed immigration attorney.",
+  },
+];
+
+const whoArray = [
+  {
+    icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
+    title: "Birth certificates",
+    description:
+      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+  },
+  {
+    icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
+    title: "Birth certificates",
+    description:
+      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+  },
+  {
+    icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
+    title: "Birth certificates",
+    description:
+      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+  },
+  {
+    icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
+    title: "Birth certificates",
+    description:
+      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+  },
+];
 
 const AboutUsSection = () => {
   return (
@@ -14,19 +72,33 @@ const AboutUsSection = () => {
         accurate, and done by a fluent speaker of both English and the original
         language.
         <ul className={styles.ulLeft}>
-          <li className={styles.liLeft}><ReceiptLongIcon />Birth certificates</li>
-          <li className={styles.liLeft}><ReceiptLongIcon />Marriage/divorce records</li>
-          <li className={styles.liLeft}><ReceiptLongIcon /> Diplomas transcripts</li>
-          <li className={styles.liLeft}><ReceiptLongIcon /> Police, legal, and identity documents</li>
+          {whoArray.map((item) => (
+            <li className={styles.li}>
+              <WhoCard
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            </li>
+          ))}
         </ul>
         We follow strict formatting guidelines and ensure your documents are
         ready for submission, so you can focus on what matters most — your
         immigration journey.
         <h2 className={styles.title}> Why choose us?</h2>
-        <ul className={styles.ulLeft}>
-          <li className={styles.liLeft}><DoneOutlineIcon />Translations accepted by USCIS</li>
-          <li className={styles.liLeft}><DoneOutlineIcon /> Quick turnaround & professional formatting</li>
-          <li className={styles.liLeft}><DoneOutlineIcon />Bilingual support & affordable pricing</li>
+        <ul className={styles.ulWhy}>
+          <li className={styles.liWhy}>
+            <Translation width={"4rem"} />
+            Translations accepted by USCIS
+          </li>
+          <li className={styles.liWhy}>
+            <Formatting width={"4rem"} /> Quick turnaround & professional
+            formatting
+          </li>
+          <li className={styles.liWhy}>
+            <Support width={"4rem"} />
+            Bilingual support & affordable pricing
+          </li>
         </ul>
       </div>
       <div className={styles.rightSide}>
@@ -34,35 +106,16 @@ const AboutUsSection = () => {
         At AnchorPointe – Immigration Services and Document Preparation, we
         believe in honesty and transparency with our clients. That’s why we want
         to make the following clear:
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            <strong className={styles.strong}>
-              We are not lawyers and do not offer legal advice
-            </strong>
-            We are not authorized to represent you before USCIS or provide legal
-            guidance regarding your case.
-          </li>
-          <li className={styles.li}>
-            <strong className={styles.strong}>
-              We do not guarantee immigration outcomes
-            </strong>
-            We assist you in correctly preparing your forms, but final approval
-            is solely the responsibility of the U.S. government.
-          </li>
-          <li className={styles.li}>
-            <strong className={styles.strong}>
-              We do not alter or falsify documents
-            </strong>
-            We only work with truthful information and documentation, in full
-            compliance with all legal regulations.
-          </li>
-          <li className={styles.li}>
-            <strong className={styles.strong}>
-              We do not replace specialized legal consultations
-            </strong>
-            If your case is complex or involves potential legal consequences, we
-            recommend consulting with a licensed immigration attorney.
-          </li>
+        <ul className={styles.ulRight}>
+          {disclaimers.map((item) => (
+            <li className={styles.li}>
+              <WhatNotCard
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </section>
