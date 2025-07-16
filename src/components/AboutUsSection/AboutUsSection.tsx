@@ -42,21 +42,21 @@ const whoArray = [
   },
   {
     icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
-    title: "Birth certificates",
+    title: "Marriage/Divorce records",
     description:
-      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+      "Legal documents that provide evidence of a marriage or its dissolution, often required for legal, immigration, or personal purposes.",
   },
   {
     icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
-    title: "Birth certificates",
+    title: "Diplomas transcripts",
     description:
-      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+      "Educational records that certify the completion of academic programs and list the courses taken and grades received.",
   },
   {
     icon: <ReceiptLongIcon sx={{ fontSize: "3rem" }} />,
-    title: "Birth certificates",
+    title: "Police, legal and identify documents",
     description:
-      "Official government-issued documents that confirm the details of a person's birth, including name, date, place of birth, and parentage.",
+      "A variety of official records used to verify identity, background, or legal status, including police clearances, court documents, and national IDs.",
   },
 ];
 
