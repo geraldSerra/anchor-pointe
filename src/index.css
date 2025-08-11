@@ -13,17 +13,12 @@ body {
   font-size: clamp(12px, 1.5vw, 16px);
   color: var(--primary-color);
   background-color: var(--background-color);
-
   --primary-color: #021c2b;
   --secondary-color: #777777;
   --white-color: #fff;
-  --accent-color: #093FB4;
-
-  --x-margin: 0 1rem ;
-
-
-
-  --section-max-width: 1400px;
+  --accent-color: #093fb4;
+  --x-margin: 0 1rem;
+  --section-max-width: 1420px;
   --section-margin-x: 0px 20px;
   --section-margin-top: 90px;
   --sections-small-margin-x: 0px 10px;

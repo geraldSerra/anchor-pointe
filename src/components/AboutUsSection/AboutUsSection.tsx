@@ -9,24 +9,30 @@ import WhatNotCard from "../WhatNotCard/WhatNotCard";
 const disclaimers = [
   {
     icon: "1",
+    title: "We are not a government agency",
+    description:
+      "We do not issue official documents or make decisions regarding your case. We provide private assistance to help you complete your forms correctly.",
+  },
+  {
+    icon: "2",
     title: "We are not lawyers and do not offer legal advice",
     description:
       "We are not authorized to represent you before USCIS or provide legal guidance regarding your case.",
   },
   {
-    icon: "2",
+    icon: "3",
     title: "We do not guarantee immigration outcomes",
     description:
       "We assist you in correctly preparing your forms, but final approval is solely the responsibility of the U.S. government.",
   },
   {
-    icon: "3",
+    icon: "4",
     title: "We do not alter or falsify documents",
     description:
       "We only work with truthful information and documentation, in full compliance with all legal regulations.",
   },
   {
-    icon: "4",
+    icon: "5",
     title: "We do not replace specialized legal consultations",
     description:
       "If your case is complex or involves potential legal consequences, we recommend consulting with a licensed immigration attorney.",

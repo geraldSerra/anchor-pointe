@@ -1,21 +1,17 @@
 import styles from "./Hero.module.css";
 import logo from "../../assets/hero-anchor.png";
-// import flag from "../../assets/usa-flag.png";
 import scrollToSection from "../../utils/scrollToSection";
 import PhoneIcon from "@mui/icons-material/Phone";
-import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
 
 const Hero = () => {
   return (
     <div className={styles.container}>
-      {/* <img className={styles.flag} src={flag} alt="USA flag" /> */}
       <div className={styles.content}>
         <img
           className={styles.img}
           src={logo}
           alt="Una familia sonriendo frente a la bandera de USA"
         />
-
         <div className={styles.info}>
           <div className={styles.title}>
             Your <span className={styles.highlight}>migration</span> journey,

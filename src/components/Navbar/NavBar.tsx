@@ -13,7 +13,7 @@ const NavBar = () => {
       <div className={styles.content}>
         <div className={styles.logoContainer}>
           <img className={styles.logo} src={logo} alt="logo" />
-          <div className={styles.name}>ANCHOR POINTE</div>
+          <div className={styles.name}>AnchorPointe</div>
         </div>
         <ul className={styles.tabsContainer}>
           <li className={styles.li}>

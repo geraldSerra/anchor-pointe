@@ -31,7 +31,7 @@ export default function NavbarDrawer({
   const List = () => (
     <ul className={styles.tabsContainer}>
       <div className={styles.head}>
-        ANCHOR POINTE
+        AnchorPointe
         <CloseIcon sx={{ fontSize: "2.5rem" }} onClick={() => setOpen(false)} />
       </div>
       <li className={styles.li}>

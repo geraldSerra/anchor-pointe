@@ -2,6 +2,9 @@ import styles from "./Footer.module.css";
 import icon from "../../assets/anchor-pointe-logo-name.png";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
+
 const Footer = () => {
   return (
     <div className={styles.footer}>
@@ -28,6 +31,10 @@ const Footer = () => {
           <div className={styles.li}>
             <PhoneIcon />
             +1 (239) 237-9775
+          </div>
+          <div className={styles.li}>
+            <LocationOnIcon />
+            1322 SE 46th LN #201, Cape Coral, FL 33904 (no walk ins)
           </div>
         </div>
       </div>
