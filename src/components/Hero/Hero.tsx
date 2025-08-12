@@ -3,6 +3,13 @@ import logo from "../../assets/hero-anchor.png";
 import scrollToSection from "../../utils/scrollToSection";
 import PhoneIcon from "@mui/icons-material/Phone";
 
+// Extend the Window interface to include gtag_report_conversion
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url: string) => void;
+  }
+}
+
 const Hero = () => {
   return (
     <div className={styles.container}>
@@ -28,7 +35,13 @@ const Hero = () => {
             >
               Schedule
             </button>
-            <a href="tel:+12392379775">
+            <a href="tel:+12392379775"
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window.gtag_report_conversion === "function") {
+                  window.gtag_report_conversion("tel:+18001234567");
+                }
+              }}>
               <button className={`${styles.button} ${styles.callus}`}>
                 <PhoneIcon /> Call Us
               </button>
@@ -36,7 +49,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <RecordVoiceOverIcon sx={{ fontSize: "2rem" }} /> */}
       <div className={styles.hablamosEspañol}>
         Hablamos <span className={styles.español}>Español</span>
       </div>

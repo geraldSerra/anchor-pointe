@@ -18,9 +18,27 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
+
     gtag('config', 'AW-17410018183');
   </script>
-  <script> gtag('event', 'conversion', { 'send_to': 'AW-17410018183/XNQfCMHxx4QbEIeX3-1A', 'transaction_id': '' }); </script>
+
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17410018183/lgYwCN2Hj4UbEIeX3-1A',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <title>Anchor Pointe</title>
 </head>
 
@@ -28,4 +46,5 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 </body>
+
 </html>
