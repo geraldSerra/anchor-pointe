@@ -2,13 +2,7 @@ import styles from "./Hero.module.css";
 import logo from "../../assets/hero-anchor.png";
 import scrollToSection from "../../utils/scrollToSection";
 import PhoneIcon from "@mui/icons-material/Phone";
-
-// Extend the Window interface to include gtag_report_conversion
-declare global {
-  interface Window {
-    gtag_report_conversion?: (url: string) => void;
-  }
-}
+import gtagConversion from "../../utils/gtagConversion";
 
 const Hero = () => {
   return (
@@ -38,9 +32,7 @@ const Hero = () => {
             <a href="tel:+12392379775"
               onClick={(e) => {
                 e.preventDefault();
-                if (typeof window.gtag_report_conversion === "function") {
-                  window.gtag_report_conversion("tel:+18001234567");
-                }
+                gtagConversion("phone_call", "tel:+12392379775");
               }}>
               <button className={`${styles.button} ${styles.callus}`}>
                 <PhoneIcon /> Call Us

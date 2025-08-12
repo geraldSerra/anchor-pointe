@@ -1,19 +1,13 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 import emailjs from "@emailjs/browser";
-
-declare global {
-  interface Window {
-    gtag_report_form_submission?: () => void;
-  }
-}
+import gtagConversion from "../../utils/gtagConversion";
 
 const ContactUsForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [preference, setPreference] = useState("");
-  // const [selectedServices, setSelectedServices] = useState<serviceType[]>([]);
   const [isSubmited, setIsSubmited] = useState(false);
 
   const handleEmail = (value: string) => {
@@ -41,9 +35,7 @@ const ContactUsForm = () => {
 
   const handleSendEmail = (e: any) => {
     e.preventDefault();
-    if (typeof window.gtag_report_form_submission === "function") {
-      window.gtag_report_form_submission();
-    }
+    gtagConversion("form_submission", "");
 
     const formData = {
       name: name,
@@ -59,6 +51,7 @@ const ContactUsForm = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+
           emailjs
             .send(SERVICE_ID, "template_9vu3oz7", formData, {
               publicKey: PUBLIC_KEY,
