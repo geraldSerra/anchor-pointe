@@ -41,6 +41,9 @@ const ContactUsForm = () => {
 
   const handleSendEmail = (e: any) => {
     e.preventDefault();
+    if (typeof window.gtag_report_form_submission === "function") {
+      window.gtag_report_form_submission();
+    }
 
     const formData = {
       name: name,
@@ -56,9 +59,6 @@ const ContactUsForm = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          if (typeof window.gtag_report_form_submission === "function") {
-            window.gtag_report_form_submission();
-          }
           emailjs
             .send(SERVICE_ID, "template_9vu3oz7", formData, {
               publicKey: PUBLIC_KEY,

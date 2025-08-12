@@ -39,6 +39,23 @@
     }
   </script>
 
+  <script>
+    function gtag_report_form_submission(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17410018183/l6t9CIbwmYUbEIeX3-1A',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <title>Anchor Pointe</title>
 </head>
 
