@@ -2,6 +2,12 @@ import { useState } from "react";
 import styles from "./Form.module.css";
 import emailjs from "@emailjs/browser";
 
+declare global {
+  interface Window {
+    gtag_report_form_submission?: () => void;
+  }
+}
+
 const ContactUsForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,56 +27,6 @@ const ContactUsForm = () => {
   const handlePhone = (value: string) => {
     setPhone(value);
   };
-
-  const handlePreference = (value: string) => {
-    setPreference(value);
-  };
-
-  // const handleServices = (service: serviceType) => {
-  //   const selectedService = selectedServices.find(
-  //     (item: serviceType) => item.id === service.id
-  //   );
-
-  //   if (selectedService) {
-  //     setSelectedServices((prev: serviceType[]) => {
-  //       return prev.filter((item: serviceType) => item.id !== service.id);
-  //     });
-  //   } else {
-  //     setSelectedServices((prev: serviceType[]) => [...prev, service]);
-  //   }
-  // };
-
-  // const ServiceFormCard = ({
-  //   name,
-  //   selected = false,
-  // }: {
-  //   name: string;
-  //   selected?: boolean;
-  // }) => {
-  //   let iconColor = "";
-  //   let containerStyle = "";
-  //   let dotStyle = "";
-
-  //   if (selected) {
-  //     iconColor = primaryColor;
-  //     containerStyle = `${styles.serviceContainer} ${styles.serviceContainerSelected}`;
-  //     dotStyle = `${styles.dot} ${styles.dotSelected}`;
-  //   } else {
-  //     iconColor = gray;
-  //     containerStyle = styles.serviceContainer;
-  //     dotStyle = styles.dot;
-  //   }
-
-  //   return (
-  //     <div className={containerStyle}>
-  //       <div className={styles.header}>
-  //         <ServiceIcon color={iconColor} width="20px" height="20px" />
-  //         <div className={dotStyle}></div>
-  //       </div>
-  //       <div>{name}</div>
-  //     </div>
-  //   );
-  // };
 
   const SERVICE_ID = "service_lqpycft";
   const TEMPLATE_ID = "template_866jti9";
@@ -100,6 +56,9 @@ const ContactUsForm = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          if (typeof window.gtag_report_form_submission === "function") {
+            window.gtag_report_form_submission();
+          }
           emailjs
             .send(SERVICE_ID, "template_9vu3oz7", formData, {
               publicKey: PUBLIC_KEY,
@@ -109,11 +68,11 @@ const ContactUsForm = () => {
                 handleResetForm();
                 alert("Your request was submitted!");
               },
-              (error: any) => {}
+              (error: any) => { }
             );
           handleResetForm();
         },
-        (error: any) => {}
+        (error: any) => { }
       );
   };
 
