@@ -14,23 +14,19 @@
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17410018183"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17410018183');
-  </script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
+    //Basic configuration
     gtag('config', 'AW-17410018183');
+
+    //Conversion tracking for phone calls
     gtag('config', 'AW-17410018183/_P12CMSRrIYbEIeX3-1A', { 'phone_conversion_number': '+12392379775' });
-  </script>
 
-  <script>
+    // Conversions function
     function gtag_conversion(url, id) {
       var callback = function () {
         if (typeof (url) != 'undefined') {
@@ -46,6 +42,7 @@
       return false;
     }
   </script>
+
   <title>Anchor Pointe</title>
 </head>
 
